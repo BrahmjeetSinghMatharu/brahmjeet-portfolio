@@ -163,15 +163,10 @@ export default function Toolkit() {
             </div>
 
             <div className="mt-5 grid grid-cols-4 gap-1 max-[390px]:gap-0.5 sm:gap-1.5 md:grid-cols-5 xl:grid-cols-6">
-              {featuredStack.map((app, index) => (
-                <motion.article
+              {featuredStack.map((app) => (
+                <div
                   key={app.name}
-                  className="mobile-premium-card premium-blue-card toolkit-card rounded-xl px-1 py-1.5 max-[390px]:px-0.5 max-[390px]:py-1 sm:rounded-[18px] sm:px-2 sm:py-2.5"
-                  initial={{ opacity: 0, scale: 0.82 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ delay: index * 0.02, duration: 0.32 }}
-                  whileHover={{ y: -4 }}
+                  className="mobile-premium-card premium-blue-card toolkit-card rounded-xl px-1 py-1.5 max-[390px]:px-0.5 max-[390px]:py-1 sm:rounded-[18px] sm:px-2 sm:py-2.5 transition-transform duration-300 ease-out hover:-translate-y-1"
                 >
                   <div className="flex flex-col items-center text-center">
                     <div className="toolkit-card-icon flex h-7 w-7 items-center justify-center rounded-[9px] border border-[rgba(0,113,227,0.16)] bg-[linear-gradient(180deg,rgba(30,34,45,1),rgba(12,14,21,1))] shadow-[0_10px_18px_rgba(0,0,0,0.2)] max-[390px]:h-6.5 max-[390px]:w-6.5 sm:h-10 sm:w-10 sm:rounded-xl">
@@ -191,7 +186,7 @@ export default function Toolkit() {
                     </h3>
                   </div>
                   </div>
-                </motion.article>
+                </div>
               ))}
             </div>
 

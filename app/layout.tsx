@@ -8,6 +8,9 @@ import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
 import SoundToggle from "@/components/SoundToggle";
 
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 export const metadata: Metadata = {
   title: {
     default: "Brahmjeet Singh",
