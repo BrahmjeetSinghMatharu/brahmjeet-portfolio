@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio (Next.js 16)
 
-## Getting Started
+Personal portfolio built with Next.js App Router, Tailwind CSS v4, Framer Motion, and GSAP.
 
-First, run the development server:
+## Requirements
+
+- Node.js 20+
+- npm 10+
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production Validation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Before deploying, run:
 
-## Learn More
+```bash
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+If both pass, the project is deployment-ready.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Option A: Vercel Dashboard (recommended)
 
-## Deploy on Vercel
+1. Push this repository to GitHub.
+2. Go to Vercel and click New Project.
+3. Import the repository.
+4. Keep detected defaults:
+	- Framework Preset: Next.js
+	- Build Command: `next build`
+	- Install Command: `npm install`
+	- Output Directory: `.next` (managed by Next.js)
+5. Click Deploy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Option B: Vercel CLI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm i -g vercel
+vercel
+vercel --prod
+```
+
+## Environment Variables
+
+This project currently does not require mandatory environment variables for build/deploy.
+
+If you add any later:
+- Put local secrets in `.env.local`.
+- Add production values in Vercel Project Settings -> Environment Variables.
+- Only expose client-safe values with `NEXT_PUBLIC_` prefix.
+
+## Notes
+
+- `package-lock.json` is committed, so Vercel will use npm lockfile installs.
+- Static assets should be placed in `public/`.
+- `.vercel` and `.env*` are already ignored in `.gitignore`.
