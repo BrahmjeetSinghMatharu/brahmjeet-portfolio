@@ -398,7 +398,7 @@ export default function Hero() {
                 </a>
               </MagneticButton>
               <a
-                href="https://drive.google.com/file/d/1dV0k8CeYnomR91_uCWlcgu0t7RGLqEGf/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1nj4kDAQZm1tEtnxOneY5AdusilZwBwIE/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="cta-ghost inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-[11px] font-medium uppercase tracking-widest text-(--text) max-[390px]:px-4.5 max-[390px]:py-2.25 max-[375px]:px-4 max-[375px]:text-[10.5px] max-[360px]:px-3.5 max-[360px]:text-[10px] sm:px-7 sm:py-3 sm:text-[13px] sm:tracking-[0.12em]"
